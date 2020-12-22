@@ -6,7 +6,7 @@
             <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" data-tray-tst="vitrine_produto_link_imagem">
             
                 <img class="product__image lazy-new" 
-                src="{{ product.images[0].full }}" 
+                src="{{ product.images[0].small }}" 
                 data-src="{{ product.images[0].full }}" 
                 data-srcset="{{ product.images[0].full }}" 
                 alt="{{ product.name }}"
@@ -19,7 +19,7 @@
         {% else %}
             <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" data-tray-tst="vitrine_produto_link_imagem">
                 <img class="product__image lazy-new" 
-                src="{{ product.images[0].full }}" 
+                src="{{ product.images[0].small }}" 
                 data-src="{{ product.images[0].full }}" 
                 data-srcset="{{ product.images[0].full }}" 
                 alt="{{ product.name }}"
