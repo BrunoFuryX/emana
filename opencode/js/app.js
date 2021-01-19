@@ -1,8 +1,4 @@
 
- 
-
-
-
 
 
 
@@ -15,8 +11,8 @@ jQuery('.button__close--navigation').click(function() {
     jQuery('body').removeClass('menu__open')
 });
 
-
  
+
 
  if($('.showcase__list[data-carousel=true]')) {
     $('.showcase__list[data-carousel=true]').each(function(){
@@ -54,6 +50,11 @@ jQuery('.button__close--navigation').click(function() {
     });
     
  }
+
+
+
+ 
+
 
 
 
@@ -130,6 +131,72 @@ if(button) {
  
 
 
+// function FakeSelect() {
+//     $('select').each(function(){
+//         if($(this).closest('.fake-select').length === 0) {
+//             var text = $(this).find('option:selected').text();
+//             var fake = $('<div class="fake-select">');
+//             var label = $('<span class="fake-select__label">').text(text);
+//             var cssClass = $(this).attr('class').split(' ');
+
+//             cssClass.forEach((item) => {
+//                 if(item !== '') {
+//                     fake.addClass(item);
+//                 }
+//             })
+
+//             fake.prepend(label);
+//             $(this).after(fake);
+//             fake.append(this);
+
+//             $(this).change(() => { label.text($(this).find('option:selected').text()) });
+//         }
+//     });
+// }
+
+// FakeSelect();
+
+// document.addEventListener('FAKESELECT', () => { FakeSelect() }, false);
+
+
+if ($('.page-home').length > 0) {
+    // Get cookie function
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        console.log(decodedCookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                console.log(c.substring(name.length, c.length));
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    } 
+
+    // call getCokkie function and set into exists variable
+    var exists = getCookie('CookieAlertBase');
+
+    // check if cookie is active
+    if (exists != 'true') {
+
+        jQuery("body").addClass("show-lgpd-alert");
+
+        jQuery(".lgpd-alert, .lgpd-alert__close").on("click", function (e) {
+            if (e.target === e.currentTarget) {
+                jQuery("body").removeClass("show-lgpd-alert");
+                window.sessionStorage.setItem("lgpd-alert", 1);
+            }
+        }); 
+
+        document.cookie = "CookieAlertBase=true";
+    };
+}
 
 
 
@@ -195,34 +262,6 @@ childs.forEach((child) => {
 
 
 
-
-
-// function FakeSelect() {
-//     $('select').each(function(){
-//         if($(this).closest('.fake-select').length === 0) {
-//             var text = $(this).find('option:selected').text();
-//             var fake = $('<div class="fake-select">');
-//             var label = $('<span class="fake-select__label">').text(text);
-//             var cssClass = $(this).attr('class').split(' ');
-
-//             cssClass.forEach((item) => {
-//                 if(item !== '') {
-//                     fake.addClass(item);
-//                 }
-//             })
-
-//             fake.prepend(label);
-//             $(this).after(fake);
-//             fake.append(this);
-
-//             $(this).change(() => { label.text($(this).find('option:selected').text()) });
-//         }
-//     });
-// }
-
-// FakeSelect();
-
-// document.addEventListener('FAKESELECT', () => { FakeSelect() }, false);
 
 
 
@@ -358,8 +397,6 @@ if($('.rulers__list')) {
 
 
 
- 
-
 
 // var $ = $tray;
 // if( typeof $ == 'function') {
@@ -431,3 +468,5 @@ if($('.rulers__list')) {
 //         }
 //     }
 // }
+
+ 

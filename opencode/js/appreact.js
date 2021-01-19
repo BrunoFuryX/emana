@@ -4241,11 +4241,9 @@ function decodeString(str) {
 
   // look up attachments if type binary
   if (exports.BINARY_EVENT === p.type || exports.BINARY_ACK === p.type) {
-    var buf = '';
-    while (str.charAt(++i) !== '-') {
-      buf += str.charAt(i);
-      if (i == str.length) break;
-    }
+    var start = i + 1;
+    while (str.charAt(++i) !== '-' && i != str.length) {}
+    var buf = str.substring(start, i);
     if (buf != Number(buf) || str.charAt(i) !== '-') {
       throw new Error('Illegal attachments');
     }
@@ -4254,13 +4252,13 @@ function decodeString(str) {
 
   // look up namespace (if any)
   if ('/' === str.charAt(i + 1)) {
-    p.nsp = '';
+    var start = i + 1;
     while (++i) {
       var c = str.charAt(i);
       if (',' === c) break;
-      p.nsp += c;
       if (i === str.length) break;
     }
+    p.nsp = str.substring(start, i);
   } else {
     p.nsp = '/';
   }
@@ -4268,17 +4266,16 @@ function decodeString(str) {
   // look up id
   var next = str.charAt(i + 1);
   if ('' !== next && Number(next) == next) {
-    p.id = '';
+    var start = i + 1;
     while (++i) {
       var c = str.charAt(i);
       if (null == c || Number(c) != c) {
         --i;
         break;
       }
-      p.id += str.charAt(i);
       if (i === str.length) break;
     }
-    p.id = Number(p.id);
+    p.id = Number(str.substring(start, i + 1));
   }
 
   // look up json data
@@ -6541,7 +6538,7 @@ Polling.prototype.onData = function (data) {
   debug('polling got data %s', data);
   var callback = function (packet, index, total) {
     // if its the first message we consider the transport open
-    if ('opening' === self.readyState) {
+    if ('opening' === self.readyState && packet.type === 'open') {
       self.onOpen();
     }
 
@@ -44956,7 +44953,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52428" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62582" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
