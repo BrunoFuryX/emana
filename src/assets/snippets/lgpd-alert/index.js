@@ -1,5 +1,4 @@
 
-if ($('.page-home').length > 0) {
     // Get cookie function
     function getCookie(cname) {
         var name = cname + "=";
@@ -36,4 +35,3 @@ if ($('.page-home').length > 0) {
 
         document.cookie = "CookieAlertBase=true";
     };
-}
