@@ -1,4 +1,4 @@
-import "./monitoring.js"
+// import "./monitoring.js"
 import React from "react"
 import ReactDOM from "react-dom"
 
@@ -10,10 +10,10 @@ import { minicartFetch } from "./actions/index"
 
 const store = configureStore()
 
-Element.prototype.remove = function() {
+Element.prototype.remove = function () {
     this.parentElement.removeChild(this)
 }
-NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
     for (var i = this.length - 1; i >= 0; i--) {
         if (this[i] && this[i].parentElement) {
             this[i].parentElement.removeChild(this[i])
@@ -65,7 +65,7 @@ if (config.minicart.actived) {
 // Listen for the event.
 window.addEventListener(
     "UPDATECART",
-    function(e) {
+    function (e) {
         if (config.minicart.actived) {
             store.dispatch(
                 minicartFetch(
@@ -76,9 +76,9 @@ window.addEventListener(
             axios
                 .get(
                     "/web_api/cart/" +
-                        document
-                            .querySelector("html")
-                            .getAttribute("data-session")
+                    document
+                        .querySelector("html")
+                        .getAttribute("data-session")
                 )
                 .then(response => response.data)
                 .then(data => {
@@ -116,7 +116,7 @@ window.addEventListener(
 
                     return null
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log(error)
                 })
         }

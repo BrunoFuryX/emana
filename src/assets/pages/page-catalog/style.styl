@@ -17,9 +17,7 @@
         min-width: 0
         padding: 0 (30px / 2)
 
-    &__left 
-        .preload & 
-            visibility: hidden
+  
     .main__container
         padding: 0 15px
 
@@ -38,19 +36,19 @@
             .button__close 
                 opacity: 0 
 
-            // &[aria-hidden=true]
-            //     .button__close 
-            //         opacity: 0 
-            //         animation: slideCloseButton 500ms 1 ease
+            &[aria-hidden=true]
+                .button__close 
+                    opacity: 0 
+                    animation: slideCloseButton 500ms 1 ease
 
-            // &[aria-hidden=false]
-            //     .button__mask
-            //         opacity: 1 
-            //         visibility: visible
+            &[aria-hidden=false]
+                .button__mask
+                    opacity: 1 
+                    visibility: visible
 
-            //     .button__close 
-            //         opacity: 1
-            //         animation: slideOpenButton 500ms 1 ease
+                .button__close 
+                    opacity: 1
+                    animation: slideOpenButton 500ms 1 ease
             
         &__filters 
             position: fixed 
@@ -66,13 +64,13 @@
 
             transform: translate3d(-100%, 0, 0)
 
-            // [aria-hidden=true] & 
-            //     transform: translate3d(-100%, 0, 0)
-            //     animation: slideClose 500ms 1 ease
+            [aria-hidden=true] & 
+                transform: translate3d(-100%, 0, 0)
+                animation: slideClose 500ms 1 ease
 
-            // [aria-hidden=false] &
-            //     transform: translate3d(0, 0, 0)
-            //     animation: slideOpen 500ms 1 ease
+            [aria-hidden=false] &
+                transform: translate3d(0, 0, 0)
+                animation: slideOpen 500ms 1 ease
 
             &-scroll 
                 width: 100%

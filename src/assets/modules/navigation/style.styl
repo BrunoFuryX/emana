@@ -53,20 +53,20 @@
         .button__close
             opacity: 1
 
-    // // Transição para abrir o menu
-    // &[aria-hidden=false]
-    //     .navigation 
-    //         &__container 
-    //             transform: translate3d(0, 0, 0)
-    //             animation: slideOpen 500ms 1 ease
+    // Transição para abrir o menu
+    &[aria-hidden=false]
+        .navigation 
+            &__container 
+                transform: translate3d(0, 0, 0)
+                animation: slideOpen 500ms 1 ease
 
-    //         &__bg 
-    //             opacity: 1
-    //             visibility: visible
+            &__bg 
+                opacity: 1
+                visibility: visible
 
-    //     .button__close
-    //         opacity: 1
-    //         animation: slideOpenButton 500ms 1 ease
+        .button__close
+            opacity: 1
+            animation: slideOpenButton 500ms 1 ease
                 
 @media (min-width: 992px) 
     .navigation
