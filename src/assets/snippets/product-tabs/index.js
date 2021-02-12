@@ -43,3 +43,7 @@
 //     }
 // });
 
+var test = $("#tab-payments").attr("data-url");
+$.get(test, function(resultado){
+    $("#tab-payments").html(resultado);
+})
