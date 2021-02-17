@@ -101,7 +101,6 @@ class quickview extends Component {
 
     updateInputQtd(event) {
         let qtd = event.target.value;
-        if(qtd < 1) qtd = 1;
 
         this.setState({ qtd });
         this.props.resetBuy();

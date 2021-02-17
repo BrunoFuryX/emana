@@ -34800,7 +34800,6 @@ var quickview = /*#__PURE__*/function (_Component) {
     key: "updateInputQtd",
     value: function updateInputQtd(event) {
       var qtd = event.target.value;
-      if (qtd < 1) qtd = 1;
       this.setState({
         qtd: qtd
       });
@@ -35251,17 +35250,17 @@ var minicart = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      var minicart = this.props.minicart;
+      var _minicart = this.props.minicart;
       var main,
           footer = '';
       var total = '0,00';
 
-      if (!parseInt(minicart.amount)) {
+      if (!parseInt(_minicart.amount)) {
         main = /*#__PURE__*/_react.default.createElement("div", {
           className: "minicart__empty"
         }, "Seu carrinho est\xE1 vazio.");
       } else {
-        total = minicart.products.map(function (cart) {
+        total = _minicart.products.map(function (cart) {
           return parseFloat(cart.price) * parseInt(cart.quantity);
         });
         var aux = 0;
@@ -35276,7 +35275,7 @@ var minicart = /*#__PURE__*/function (_Component) {
         total = total.replace('R$', '');
         main = /*#__PURE__*/_react.default.createElement("ul", {
           className: "minicart__list"
-        }, minicart.products.map(function (item, key) {
+        }, _minicart.products.map(function (item, key) {
           var name = item.product_name;
           var div = document.createElement("div");
           div.innerHTML = name;
@@ -35525,7 +35524,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54103" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53532" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
