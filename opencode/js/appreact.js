@@ -34906,7 +34906,7 @@ var quickview = /*#__PURE__*/function (_Component) {
       }), /*#__PURE__*/_react.default.createElement("div", {
         className: "quickview__main"
       }, /*#__PURE__*/_react.default.createElement("h1", {
-        className: "quckview__name"
+        className: "quickview__name"
       }, this.state.name), /*#__PURE__*/_react.default.createElement("h2", {
         className: "quickivew__sku"
       }, "C\xF3digo: ", this.state.sku), !this.props.availabled || /*#__PURE__*/_react.default.createElement(_index2.default, {
@@ -34965,7 +34965,7 @@ var quickview = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M75.19,50,98.68,26.51a4.51,4.51,0,0,0,0-6.38L79.87,1.32a4.51,4.51,0,0,0-6.38,0L50,24.81,26.51,1.32a4.51,4.51,0,0,0-6.38,0L1.32,20.13a4.51,4.51,0,0,0,0,6.38L24.81,50,1.32,73.49a4.51,4.51,0,0,0,0,6.38L20.13,98.68a4.51,4.51,0,0,0,6.38,0L50,75.19,73.49,98.68a4.51,4.51,0,0,0,6.38,0L98.68,79.87a4.51,4.51,0,0,0,0-6.38Z"
       }))))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "quckview__actions"
+        className: "quickview__actions"
       }, /*#__PURE__*/_react.default.createElement("button", {
         onClick: function onClick(event) {
           _this4.close(event);
@@ -35524,7 +35524,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53532" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57631" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

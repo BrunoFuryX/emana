@@ -23,12 +23,12 @@ var exists = getCookie('CookieAlertBase');
 // check if cookie is active
 if (exists != 'true') {
 
-    jQuery("body").addClass("show-lgpd-alert");
+    jQuery("body").addClass("show-cookies-alert");
 
-    jQuery(".lgpd-alert, .lgpd-alert__close").on("click", function (e) {
+    jQuery(".cookies-alert, .cookies-alert__close").on("click", function (e) {
         if (e.target === e.currentTarget) {
-            jQuery("body").removeClass("show-lgpd-alert");
-            window.sessionStorage.setItem("lgpd-alert", 1);
+            jQuery("body").removeClass("show-cookies-alert");
+            window.sessionStorage.setItem("cookies-alert", 1);
         }
     });
 

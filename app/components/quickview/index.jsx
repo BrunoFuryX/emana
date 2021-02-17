@@ -174,7 +174,7 @@ class quickview extends Component {
                 <Images images={this.props.images} />
 
                 <div className="quickview__main">
-                    <h1 className="quckview__name">{this.state.name}</h1>
+                    <h1 className="quickview__name">{this.state.name}</h1>
 
                     <h2 className="quickivew__sku">Código: {this.state.sku}</h2>
 
@@ -211,7 +211,7 @@ class quickview extends Component {
                 <button onClick={event =>{ this.close(event) }} className="quickview__button quickview__button--close">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><title>close</title><g id="Camada_2" data-name="Camada 2"><g id="Layer_1" data-name="Layer 1"><path d="M75.19,50,98.68,26.51a4.51,4.51,0,0,0,0-6.38L79.87,1.32a4.51,4.51,0,0,0-6.38,0L50,24.81,26.51,1.32a4.51,4.51,0,0,0-6.38,0L1.32,20.13a4.51,4.51,0,0,0,0,6.38L24.81,50,1.32,73.49a4.51,4.51,0,0,0,0,6.38L20.13,98.68a4.51,4.51,0,0,0,6.38,0L50,75.19,73.49,98.68a4.51,4.51,0,0,0,6.38,0L98.68,79.87a4.51,4.51,0,0,0,0-6.38Z"/></g></g></svg>
                 </button>
-                <div className="quckview__actions">
+                <div className="quickview__actions">
                     <button onClick={event =>{ this.close(event) }} className="quickview__button quickview__button--continue" type="button">Continuar Comprando</button>
                     <a className="quickview__button quickview__button--finish" href={ '/loja/carrinho.php?loja='+this.state.store+'&transID='+this.state.hash+'&hash='+this.state.hash }>Finalizar Compra</a>
                 </div>
