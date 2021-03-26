@@ -52,6 +52,13 @@ jQuery('.button__close--navigation').click(function() {
  }
 
 
+setTimeout(
+    function(){
+        jQuery('.page-contact #imagem').remove()
+        jQuery('.page-contact .formulario-contato').append('<button  name="imagem" id="imagem">Enviar</button>')
+    },500
+)
+   
 
 jQuery(document).ready(function () {
 
@@ -186,7 +193,6 @@ controls.forEach(control => {
 
 
 
-
 var button = $('#bt-submit-comments');
 
 if(button) {
@@ -197,6 +203,7 @@ if(button) {
         button.trigger('click');
     });
 }
+
 
 
  
