@@ -62,7 +62,7 @@ desktop = unquote("screen and (min-width: 992px)")
 mobile = unquote("screen and (max-width: 991px)")
 
 color = #70BDAF
-transition = all .2s ease-out
+transition = all .2s
 
 
 .black
@@ -90,6 +90,8 @@ transition = all .2s ease-out
     position: relative
     width: fit-content
     margin: auto
+    @media mobile
+        text-align: center
     span
         position relative
         font-size: 33px
@@ -97,6 +99,7 @@ transition = all .2s ease-out
         line-height: 35px
         color: #4D4D4D
         z-index 1
+        
     &:after
         bottom: 0
         background: #F7B84B

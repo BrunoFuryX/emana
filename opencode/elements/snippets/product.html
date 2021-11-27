@@ -121,7 +121,7 @@
             </div>
         </div>
     </div>
-
+    {% if product.stock > 0 %} 
     <div class="product__actions">
         <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" >
             <svg xmlns="http://www.w3.org/2000/svg" width="18.622" height="18.102" viewBox="0 0 18.622 18.102">
@@ -137,6 +137,7 @@
             Comprar
         </a>
     </div>
+    {% endif %}
     
 </article>
 
