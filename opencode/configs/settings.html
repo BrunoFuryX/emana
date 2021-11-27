@@ -679,6 +679,8 @@
                                 <div class="uk-width-auto@m">
                                     <ul class="uk-tab-left"
                                         uk-tab="connect: #component-tab-left3; animation: uk-animation-fade">
+                                        <li><a href="#">COMPRE POR CATEGORIA</a></li>
+
                                         <li><a href="#">RECEITAS</a></li>
                                         <li><a href="#">BLOG</a></li>
                                         <li><a href="#">INSTAGRAM</a></li>
@@ -687,6 +689,77 @@
                                 </div>
                                 <div class="uk-width-expand@m content__text">
                                     <ul id="component-tab-left3" class="uk-switcher">
+                                        <li aria-label="Instagram">
+                                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-margin upload__icon" uk-margin>
+                                                            <div uk-form-custom="target: true">
+                                                                <input type="file" name="categoria1">
+                                                                <input class="uk-input uk-form-width-medium" type="text"
+                                                                    placeholder="Select file" disabled>
+                                                                <button
+                                                                    class="uk-button uk-button-default">UPLOAD</button>
+                                                            </div>
+                                                        </div>
+                                                        <button class="remove">REMOVER</button>
+                                                        <div class="uk-margin">
+                                                            <input class="uk-input" type="text" placeholder="Texto da foto"
+                                                                name="categoria1_text">
+                                                        </div>
+                                                        <div class="uk-margin">
+                                                            <input class="uk-input" type="text" placeholder="Link da foto"
+                                                                name="categoria1_link">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-margin upload__icon" uk-margin>
+                                                            <div uk-form-custom="target: true">
+                                                                <input type="file" name="categoria2">
+                                                                <input class="uk-input uk-form-width-medium" type="text"
+                                                                    placeholder="Select file" disabled>
+                                                                <button
+                                                                    class="uk-button uk-button-default">UPLOAD</button>
+                                                            </div>
+                                                        </div>
+                                                        <button class="remove">REMOVER</button>
+                                                        <div class="uk-margin">
+                                                            <input class="uk-input" type="text" placeholder="Texto da foto"
+                                                                name="categoria2_text">
+                                                        </div>
+                                                        <div class="uk-margin">
+                                                            <input class="uk-input" type="text" placeholder="Link da foto"
+                                                                name="categoria2_link">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-margin upload__icon" uk-margin>
+                                                            <div uk-form-custom="target: true">
+                                                                <input type="file" name="categoria3">
+                                                                <input class="uk-input uk-form-width-medium" type="text"
+                                                                    placeholder="Select file" disabled>
+                                                                <button
+                                                                    class="uk-button uk-button-default">UPLOAD</button>
+                                                            </div>
+                                                        </div>
+                                                        <button class="remove">REMOVER</button>
+                                                        <div class="uk-margin">
+                                                            <input class="uk-input" type="text" placeholder="Texto da foto"
+                                                                name="categoria3_text">
+                                                        </div>
+                                                        <div class="uk-margin">
+                                                            <input class="uk-input" type="text" placeholder="Link da foto"
+                                                                name="categoria3_link">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                                         <li aria-label="Receitas">
                                             <div class="uk-child-width-expand@s uk-text-center" uk-grid>
                                                 <div>
@@ -963,6 +1036,7 @@
                                                 </div>
                                             </div>
                                         </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -972,6 +1046,8 @@
                                 <div class="uk-width-auto@m">
                                     <ul class="uk-tab-left"
                                         uk-tab="connect: #component-tab-left4; animation: uk-animation-fade">
+                                        <li><a href="#">PRODUTOS</a></li>
+                                        <li><a href="#">CONTEUDO</a></li>
                                         <li><a href="#">INSTITUCIONAL</a></li>
                                         <li><a href="#">AJUDA</a></li>
                                     </ul>
@@ -979,6 +1055,404 @@
                                 <div class="uk-width-expand@m content__text">
                                     <ul id="component-tab-left4" class="uk-switcher">
                                         
+                                        <li aria-label="PRODUTOS">
+
+                                            <div class="uk-card uk-card-default uk-card-body">
+                                                <strong>
+                                                    PREENCHA OS LINKS DE PRODUTOS QUE SER&Atilde;O EXIBIDOS NO
+                                                    TOPO DE SUA LOJA.
+                                                </strong>
+                                            </div>
+                                            <hr class="uk-divider-icon">
+                                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoName01"
+                                                                placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoLink01"
+                                                                placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoName02"
+                                                                placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoLink02"
+                                                                placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoName03"
+                                                                placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoLink03"
+                                                                placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="uk-divider-icon">
+                                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoName04"
+                                                                placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoLink04"
+                                                                placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoName05"
+                                                                placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoLink05"
+                                                                placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoName06"
+                                                                placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoLink06"
+                                                                placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="uk-divider-icon">
+                                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoName07"
+                                                                placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoLink07"
+                                                                placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoName08"
+                                                                placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoLink08"
+                                                                placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoName09"
+                                                                placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="produtoLink09"
+                                                                placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="produto[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li aria-label="Ajuda">
+
+                                            <div class="uk-card uk-card-default uk-card-body">
+                                                <strong>
+                                                    PREENCHA OS LINKS DE CONTEUDO QUE SER&Atilde;O EXIBIDOS NO
+                                                    TOPO DE SUA LOJA.
+                                                </strong>
+                                            </div>
+                                            <hr class="uk-divider-icon">
+                                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoName01" placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoLink01" placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoName02" placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoLink02" placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoName03" placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoLink03" placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="uk-divider-icon">
+                                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoName04" placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoLink04" placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoName05" placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoLink05" placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoName06" placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoLink06" placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="uk-divider-icon">
+                                            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoName07" placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoLink07" placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoName08" placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoLink08" placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="uk-card uk-card-default uk-card-body">
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">T&iacute;tulo</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoName09" placeholder="Ex.: Como comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]name">
+                                                        </div>
+
+                                                        <div class="uk-inline group-input-ghost">
+                                                            <p class="uk-margin-small">Link</p>
+                                                            <input type="text" class="uk-input input-ghost"
+                                                                name="conteudoLink09" placeholder="Ex.: /como-comprar">
+                                                            <input type="text" class="uk-input input-ghost-val"
+                                                                name="conteudo[]url">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
                                         <li aria-label="Institucional">
 
                                             <div class="uk-card uk-card-default uk-card-body">

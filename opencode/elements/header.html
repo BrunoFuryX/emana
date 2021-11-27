@@ -35,12 +35,18 @@
         </div>
 
         <div class="header__central">
-            {% if utils.is_mobile %}
+            {% if not utils.is_mobile %}
 
             <div class="header__produtos">
                 <h3>Produtos</h3>
                 <ul>
-                    <li></li>
+                    {% for link in settings.produto %}
+                    {% if link.url != "" and link.name != "" %}
+                    <li>
+                        <a href="{{ link.url }}">{{ link.name }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
             <div class="header__categorias">
@@ -61,18 +67,26 @@
             <div class="header__logo">
                 {% element 'snippets/logo' %}
             </div>
-            {% if utils.is_mobile %}
+            {% if not utils.is_mobile %}
 
             <div class="header__conteudo">
                 <h3>Conteúdo</h3>
                 <ul>
-                    <li></li>
+                    {% for link in settings.conteudo %}
+                    {% if link.url != "" and link.name != "" %}
+                    <li>
+                        <a href="{{ link.url }}">{{ link.name }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
             <div class="header__contato">
                 <h3>Contato</h3>
                 <ul>
-                    <li></li>
+                    <li>
+                        <a href="mailto:{{settings.email}}"> {{ settings.email}}</a>
+                    </li>
                 </ul>
             </div>
             {% endif %}

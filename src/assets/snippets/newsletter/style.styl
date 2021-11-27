@@ -12,10 +12,19 @@
             flex-direction: column
             justify-content: center
             gap: 20px
-
+    &__main
+        @media mobile
+            width: 100%;
     &__form
         display: flex
-        
+        @media mobile
+            flex-direction: column
+            justify-content: center
+            gap: 20px
+            div 
+                width: 100%
+                input, button
+                    width: 100%
     &__header 
         display: flex 
         justify-content: space-between
@@ -25,6 +34,9 @@
         text-align: right
         @media desktop
             padding: 0 0px 0 40px;
+        @media mobile
+            text-align: center
+        
         svg
             position: absolute
             top: -20px

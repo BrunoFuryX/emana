@@ -1,5 +1,5 @@
 <div class="search">
-    <button class="search__button" type="submit" tabindex="2" aria-label="busca" placeholder="Buscar" data-tray-tst="botao_buscar" style="height: 15px;">
+    <button class="search__active" {% if utils.is_mobile %} style="display: none;" {% endif%} data-tray-tst="botao_buscar" style="height: 15px;">
         <svg xmlns="http://www.w3.org/2000/svg" width="17.989" height="17.989" viewBox="0 0 17.989 17.989">
             <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(1 1)">
               <path id="Caminho_5" data-name="Caminho 5" d="M18.344,11.422A6.922,6.922,0,1,1,11.422,4.5,6.922,6.922,0,0,1,18.344,11.422Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#a7a8a9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -7,15 +7,15 @@
             </g>
         </svg>
     </button>
-    <form class="search__form" role="form" action="{{ links.search }}" method="get" data-search="suggestion" style="display: none;">
+    <form class="search__form" role="form" action="{{ links.search }}" method="get" data-search="suggestion">
         <input type="hidden" name="loja" value="{{ store.id }}" />
         <label for="search" style="font-size: 0">search</label>
         <input class="search__input" id="search" placeholder="Buscar" type="text" data-input="suggestion" placeholder="{{ Translation('buscar') }}" name="palavra_busca" tabindex="1" data-tray-tst="busca_palavra" required />
         <button class="search__button" type="submit" tabindex="2" aria-label="busca" placeholder="Buscar" data-tray-tst="botao_buscar">
             <svg xmlns="http://www.w3.org/2000/svg" width="17.989" height="17.989" viewBox="0 0 17.989 17.989">
                 <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(1 1)">
-                  <path id="Caminho_5" data-name="Caminho 5" d="M18.344,11.422A6.922,6.922,0,1,1,11.422,4.5,6.922,6.922,0,0,1,18.344,11.422Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#a7a8a9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                  <path id="Caminho_6" data-name="Caminho 6" d="M28.739,28.739l-3.764-3.764" transform="translate(-13.164 -13.164)" fill="none" stroke="#a7a8a9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  <path id="Caminho_5" data-name="Caminho 5" d="M18.344,11.422A6.922,6.922,0,1,1,11.422,4.5,6.922,6.922,0,0,1,18.344,11.422Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  <path id="Caminho_6" data-name="Caminho 6" d="M28.739,28.739l-3.764-3.764" transform="translate(-13.164 -13.164)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                 </g>
             </svg>
               

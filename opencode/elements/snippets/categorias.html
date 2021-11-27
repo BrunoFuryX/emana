@@ -1,0 +1,47 @@
+
+<section class="categoria" data-carousel="true">
+    <div class="categoria__container">
+        <div class="categoria__header">
+            <h3 class="categoria__title titulo">
+                <span>
+                    Compre por categoria
+            </span>
+            </h3>
+        </div>
+
+        <div class="categoria__content">
+            {% if settings.categoria1%}
+                <div class="categoria__item">
+                    <a href="{{ settings.categoria1_link}}"></a>
+                        <figure>
+                            <img src="{{ asset(settings.categoria1)}}">
+                            <span>{{ settings.categoria1_text}}</span>
+                        </figure>
+                    </a>
+                </div>
+            {% endif %}
+            {% if settings.categoria2%}
+                <div class="categoria__item">
+                    <a href="{{ settings.categoria2_link}}"></a>
+                        <figure>
+                            <img src="{{ asset(settings.categoria2)}}">
+                            <span>{{ settings.categoria2_text}}</span>
+                        </figure>
+                    </a>
+                </div>
+            {% endif %}
+            {% if settings.categoria3%}
+                <div class="categoria__item">
+                    <a href="{{ settings.categoria3_link}}"></a>
+                        <figure>
+                            <img src="{{ asset(settings.categoria3)}}">
+                            <span>{{ settings.categoria3_text}}</span>
+                        </figure>
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <a class="categoria__button" href="/produtos">Ver mais</a>
+</section>
