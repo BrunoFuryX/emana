@@ -1,0 +1,43 @@
+.comentario
+    padding: 60px 0
+    &__header
+        margin-bottom: 30px
+    
+    &__content
+        display: flex
+        justify-content: space-between
+        gap: 15px
+        @media mobile
+            justify-content: center
+            flex-wrap: wrap;
+
+    &__item
+        text-align: center
+        width: 350px
+        border: 1px solid #C9C9C9
+        border-radius: 4px
+        padding: 60px 30px 20px
+
+        figure
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            margin-bottom: 20px
+            :nth-child(2)
+                margin-top: -30px
+            
+        h4
+            font-size: 22px
+            font-weight: 600
+            color: #4D4D4D
+            margin-bottom: 15px
+
+        span
+            display: block
+            width: 100%
+            font-size: 15px
+            color: #808080
+            margin-bottom: 13px
+            height: 110px
+            overflow: hidden

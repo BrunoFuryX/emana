@@ -2,20 +2,43 @@
     position: sticky
     top: 0
     z-index: 200
-    margin-bottom: 45px
     background: #fff
     transition: all .2s ease-in-out
 
     [data-scrolling-mode=down] &
-        border-bottom-style: solid
-        border-bottom-width: 1px
-        box-shadow: 0 0 10px rgba(0,0,0,.1)
+        box-shadow: 0 0 10px rgba(0,0,0,.3)
+    &__topbar
+        background: #6ABCB4
+        height: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 35px
+        @media mobile
+            display: none
+        > div
+            color: #fff
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 3px
+            svg
+                margin-left: 30px
+                margin-right: 10px
+                width: 46px
+        .divisor
+            background: #fff
+            display: block
+            height: 25px
+            width: 2px
+    
 
-    &__attendance 
-        display: none 
+
+
+
 
     &__container 
-        max-width: 1300px
+        max-width: 1140px
         display: flex 
         justify-content: space-between
         align-items: center
@@ -35,90 +58,98 @@
     &__logo, &__menu, &__customer, &__minicart 
         position: relative 
         z-index: 3
+    &__central
+        display: flex
+        gap: 48px
+        align-items: center
+        justify-content: center
+        > div
+            position: relative
+            &:not(.header__logo)
+                @media mobile
+                    display: none
+            &:hover
+                ul
+                    opacity 1
+                    visibility: visible
+            h3
+                font-size: 16px
+                font-weight: 500
+                color: #4D4D4D
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 5px
+                cursor: pointer
+                height: 65px
+                &:after
+                    display: block
+                    content ""
+                    width: 11px
+                    height: 6px
+                    background: url("../img/setaDown.png")
+            ul
+                position: absolute
+                top: 100%
+                height: auto
+                width: 200px
+                left: 0
+                background: #fff
+                padding: 20px 30px
+                border-radius: 5px
+                z-index 10
+                box-shadow: 0 0 15px #0004
+                opacity 0
+                visibility: hidden
+                li
+                    a
+                        color: #4D4D4D
+                        font-size: 14px
+                        font-weight: 400
 
+        .header__logo
+            margin: 0 17px
+    &__right
+        display: flex
+        gap: 22px
+        align-items: center
+        height: 15px
+    &__left
+        @media desktop
+            width: 95px
     &__minicart
         a.cart
             display: flex
             align-items: center
-
-            i
-                background: #fff
-
-                svg
-                    color: color
-                    
-            &:before
-                display: none
-
-            .cart-amount
-                margin-left: -2px
-                margin-top: -5px
-
-                span
-                    background: color
-                    border-radius: 50%
-                    width: 20px
-                    height: 20px
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    color: #fff
-                    font-weight: 700
     &__logo 
         flex: 1 
 
     &__customer 
-        padding: 0 (30px/2)
         display: flex
         align-items: center
         position relative
-        
-        &:hover
-            .customer__dropdown 
-                opacity 1
-                visibility: visible    
+          
+    @media mobile
+        &__search 
+            position: absolute 
+            top: 100% 
+            left: 0 
+            width: 100% 
+            z-index: 1
+            transition: all .2s ease-in-out
 
-        .customer__dropdown
-            position: absolute
-            background: white
-            top: 100%
-            padding: 15px
-            width: 100%
-            opacity 0
-            visibility: hidden
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
-            border-radius: 3px
-            transition: transition
-
-        @media(max-width: 991px)
-            display: none
-
-        strong
-            span
-                color: #7b7b7b
-                font-weight: normal
-                font-size: 13px   
-
-    &__search 
-        position: absolute 
-        top: 100% 
-        left: 0 
-        width: 100% 
-        z-index: 1
-        transition: all .2s ease-in-out
-
-        [data-scrolling-mode=down] &
-            transform: translate3d(0, -100%, 0)
+            [data-scrolling-mode=down] &
+                transform: translate3d(0, -100%, 0)
 
 @media (min-width: 992px) 
     .header 
-        margin-bottom: 50px
 
         &__container 
             position: relative 
             z-index: 20
             box-shadow: 700px 0 0 #fff, -700px 0 0 #fff
             background: #fff
+            height: 96px
             &:before 
                 display: none 
 
@@ -131,14 +162,6 @@
         &__attendance 
             display: block
 
-        &__search 
-            flex: 1
-            min-width: 0
-            position: static
-            padding: 0 25px
-
-            [data-scrolling-mode=down] &
-                transform: none 
 
 .infobox.danger
     display: none

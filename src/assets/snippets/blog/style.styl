@@ -1,0 +1,56 @@
+.blog
+    background: #EEF2F6
+    padding: 60px 0
+    &__header
+        margin-bottom: 10px
+    
+    &__button
+        width: 115px
+        height: 35px
+        border: 1px solid #A7A8A9
+        font-size: 12px
+        letter-spacing: .2px
+        font-weight: 600
+        color: #808080
+        display flex
+        justify-content: center
+        align-items: center
+        border-radius: 3px
+        margin-left: auto
+        margin-bottom: 26px
+    &__content
+        display: flex
+        justify-content: space-between
+        gap: 15px
+        @media mobile
+            justify-content: center
+            flex-wrap: wrap;
+    &__item
+        figure
+            position relative
+            margin-bottom: 25px
+            span
+                display: flex
+                width: 95px
+                height: 30px
+                justify-content: center
+                align-items: center
+                position absolute
+                top: 13px
+                left: 13px
+                border-radius: 4px
+                background: #FFFFFFbb
+                font-size: 13px
+                color: #000
+        h4
+            font-size: 22px
+            font-weight: 600
+            color: #4D4D4D
+            margin-bottom: 10px
+
+        a
+            font-size: 16px
+            font-weight: 600
+            letter-spacing: .2px
+            text-decoration: underline
+            color: #808285

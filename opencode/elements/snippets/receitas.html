@@ -1,0 +1,57 @@
+
+<section class="receita" data-carousel="true">
+    <div class="receita__container container">
+        <div class="receita__header">
+            <h3 class="receita__title titulo">
+                <span>
+                Emana receitas
+            </span>
+            </h3>
+        </div>
+        <a class="receita__button" href="/noticias">Ver mais</a>
+
+        <div class="receita__content">
+            {% if settings.receita1%}
+                <div class="receita__item">
+                    <figure>
+                        <img src="{{ asset(settings.receita1)}}">
+                        <span>{{ settings.receita1_data}}</span>
+                    </figure>
+                    <h4>
+                        {{ settings.receita1_title}}
+                    </h4>
+                    <span>{{ settings.receita1_text}}</span>
+                    <a href="{{ settings.receita1_link}}">Saiba Mais</a>
+                </div>
+            {% endif %}
+            {% if settings.receita2%}
+                <div class="receita__item">
+                    <figure>
+                        <img src="{{ asset(settings.receita2)}}">
+                        <span>{{ settings.receita2_data}}</span>
+                    </figure>
+                    <h4>
+                        {{ settings.receita2_title}}
+                    </h4>
+                    <span>{{ settings.receita2_text}}</span>
+
+                    <a href="{{ settings.receita2_link}}">Saiba Mais</a>
+                </div>
+            {% endif %}
+            {% if settings.receita3%}
+                <div class="receita__item">
+                    <figure>
+                        <img src="{{ asset(settings.receita3)}}">
+                        <span>{{ settings.receita3_data}}</span>
+                    </figure>
+                    <h4>
+                        {{ settings.receita3_title}}
+                    </h4>
+                    <span>{{ settings.receita3_text}}</span>
+
+                    <a href="{{ settings.receita3_link}}">Saiba Mais</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

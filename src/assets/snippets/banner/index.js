@@ -3,10 +3,10 @@ if($('.banner--javascript .banner__list')) {
 $('.banner--javascript .banner__list').not('.slick-initialized').slick({
     mobileFirst: false,
     infinite: false,
+    arrows: false,
+    dots: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: `<button aria-label="prev" type="button" class="slick-prev"><</button>`,
-    nextArrow: `<button aria-label="next" type="button" class="slick-next">></button>`,
     responsive: [
         {
             breakpoint: 424,

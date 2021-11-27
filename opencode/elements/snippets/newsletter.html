@@ -1,21 +1,24 @@
 <section class="newsletter" data-tray-tst="newsletter_box">
     <div class="newsletter__container">
         <header class="newsletter__header">
-            <h1 class="newsletter__title">QUER NOVIDADES <span>E PROMOÇÕES?</span></h1>
-            <h2 class="newsletter__description">Cadastre-se na nossa Newsletter</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="111.974" height="20.624" viewBox="0 0 111.974 20.624">
+                <g id="Grupo_31" data-name="Grupo 31" transform="translate(-539.257 -5710.932)">
+                  <path id="Caminho_1182" data-name="Caminho 1182" d="M539.5,5725.5c27-15,54.412-16.509,81.89-11.766,11.38,1.964,23.936,6.29,28.543,16.7" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+                  <path id="Caminho_1183" data-name="Caminho 1183" d="M636.572,5727.876a73.287,73.287,0,0,1,14.151,3,33.181,33.181,0,0,0-4.96-18.106" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+                </g>
+            </svg>
+            <h1 class="newsletter__title">Emane com a gente</h1>
+            <h2 class="newsletter__description">Receba novidade e promoções</h2>
         </header>
         <div class="newsletter__main">
             <form class="newsletter__form" action="{{ links.newsletter }}" method="post" name="newsletter" data-tray-tst="newsletter_form">
-                <div class="newsletter__box">
-                    <label for="name" style="font-size: 0">name</label>
-                    <input class="newsletter__input" id="name" name="name" type="text" placeholder="{{ Translation('digitar_nome') }}" required>
-                </div>
+                
                 <div class="newsletter__box">
                     <label for="email" style="font-size: 0">email</label>
-                    <input class="newsletter__input" name="email" type="email"id="email" placeholder="{{ Translation('digitar_email') }}" data-tray-tst="newsletter_email" required>
+                    <input class="newsletter__input" name="email" type="email"id="email" placeholder="Coloque aqui o seu email" data-tray-tst="newsletter_email" required>
                 </div>
                 <div class="newsletter__actions">
-                    <button class="newsletter__button" data-tray-tst="newsletter_cadastrar">Quero me cadastrar</button>
+                    <button class="newsletter__button" data-tray-tst="newsletter_cadastrar">Assine</button>
                 </div>
             </form>
         </div>

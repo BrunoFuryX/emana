@@ -1,0 +1,59 @@
+
+<section class="instagram" data-carousel="true">
+    <div class="instagram__container container">
+        <div class="instagram__header">
+            <h3 class="instagram__title titulo">
+                <span>
+                Conecte-se @souemana
+            </span>
+            </h3>
+        </div>
+        <div class="instagram__content">
+            {% if settings.instagram1%}
+                <div class="instagram__item">
+                    <a href="{{ settings.instagram1_link}}">
+                        <figure>
+                            <img src="{{ asset(settings.instagram1)}}">
+                        </figure>
+                    </a>
+                </div>
+            {% endif %}
+            {% if settings.instagram2%}
+            <div class="instagram__item">
+                <a href="{{ settings.instagram2_link}}">
+                    <figure>
+                        <img src="{{ asset(settings.instagram2)}}">
+                    </figure>
+                </a>
+            </div>
+            {% endif %}
+            {% if settings.instagram3%}
+            <div class="instagram__item">
+                <a href="{{ settings.instagram3_link}}">
+                    <figure>
+                        <img src="{{ asset(settings.instagram3)}}">
+                    </figure>
+                </a>
+            </div>
+            {% endif %}
+            {% if settings.instagram4%}
+            <div class="instagram__item">
+                <a href="{{ settings.instagram4_link}}">
+                    <figure>
+                        <img src="{{ asset(settings.instagram4)}}">
+                    </figure>
+                </a>
+            </div>
+            {% endif %}
+            {% if settings.instagram5%}
+            <div class="instagram__item">
+                <a href="{{ settings.instagram5_link}}">
+                    <figure>
+                        <img src="{{ asset(settings.instagram5)}}">
+                    </figure>
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

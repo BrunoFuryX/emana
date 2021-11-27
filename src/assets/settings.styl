@@ -63,3 +63,46 @@ mobile = unquote("screen and (max-width: 991px)")
 
 color = #70BDAF
 transition = all .2s ease-out
+
+
+.black
+    font-weight: 900
+.extra-bold
+    font-weight: 800
+.bold
+    font-weight: 700
+.semi-bold
+    font-weight: 600
+.medium
+    font-weight: 500
+.regular
+    font-weight: 400
+.light
+    font-weight: 300
+.thin
+    font-weight: 200
+
+*
+    transition: transition
+
+
+.titulo
+    position: relative
+    width: fit-content
+    margin: auto
+    span
+        position relative
+        font-size: 33px
+        font-weight: 600
+        line-height: 35px
+        color: #4D4D4D
+        z-index 1
+    &:after
+        bottom: 0
+        background: #F7B84B
+        width: 100%
+        height: 19px
+        content: ""
+        display: block
+        position: absolute
+        z-index 0

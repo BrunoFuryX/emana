@@ -6,30 +6,25 @@
             mobileFirst: false,
             slidesToShow: 4,
             slidesToScroll: 4,
+            arrows: false,
             prevArrow: `<button aria-label="prev" type="button" class="slick-prev"><</button>`,
             nextArrow: `<button aria-label="prev" type="button" class="slick-next">></button>`,
             responsive: [
                 {
-                    breakpoint: 424,
+                    breakpoint: 640,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 },
                 {
-                    breakpoint: 767,
+                    breakpoint: 960,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                    }
-                },
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4   
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 }
+
             ]   
         });
     });

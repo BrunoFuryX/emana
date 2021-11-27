@@ -8,11 +8,10 @@
             {% else %}
             
                 <div class="prices__container">
-                    {% set priceOld = 'De: ' %}
 
                     {% if product.price_offer > 0 and product.show_price %}
                         <div class="prices__old">
-                            <span class="prices__label">{{ priceOld }}</span>
+                            <span class="prices__label">R$</span>
                             <span class="prices__price">{{ product.price|currency }}</span>
                         </div>
                         
@@ -21,7 +20,7 @@
                                 <span class="prices__label">{{ Translation('apartir') }}</span>
                                 <span class="prices__price">{{ product.price_offer|currency  }}</span>
                             {% else %}
-                                <span class="prices__label">{{ priceOld ? 'Por: ' }}</span>
+                                <span class="prices__label">R$</span>
                                 <span class="prices__price">{{ product.price_offer|currency  }}</span>
                             {% endif %}
                         </div>
@@ -31,7 +30,7 @@
                                 <span class="prices__label">{{ Translation('apartir') }} </span>
                                 <span class="price__price">{{ product.price|currency  }}</span>
                             {% else %}
-                                <span class="prices__label">{{ priceOld ? 'Por: ' }}</span>
+                                <span class="prices__label">R$</span>
                                 <span class="prices__price">{{ product.price|currency  }}</span>
                             {% endif %}
                         </div>

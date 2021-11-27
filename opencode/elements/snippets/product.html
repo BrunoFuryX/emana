@@ -123,11 +123,19 @@
     </div>
 
     <div class="product__actions">
-        <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" >Comprar</a>
-        <button class="quick__button" data-quickview-button type="button" data-id="{{ product.id }}">
-           quickview
-        </button>
-
+        <a class="product__link" href="{{ settings.buy_to_cart ? links.cart_add ~ product.id : product.link }}" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18.622" height="18.102" viewBox="0 0 18.622 18.102">
+                <g id="Camada_2" data-name="Camada 2" transform="translate(0 0.71)">
+                  <g id="Layer_1" data-name="Layer 1" transform="translate(0 0)">
+                    <path id="Caminho_3" data-name="Caminho 3" d="M.79.71h2.5L6.234,11.773l.726,2.716h10.15" transform="translate(-0.79 -0.71)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.42"/>
+                    <path id="Caminho_4" data-name="Caminho 4" d="M3.4,3.03H17.9L16.453,11,5.515,10.9Z" transform="translate(-0.134 -0.127)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.42"/>
+                    <circle id="Elipse_1" data-name="Elipse 1" cx="1.452" cy="1.452" r="1.452" transform="translate(5.444 13.779)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.42"/>
+                    <circle id="Elipse_2" data-name="Elipse 2" cx="1.452" cy="1.452" r="1.452" transform="translate(14.868 13.779)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.42"/>
+                  </g>
+                </g>
+            </svg>
+            Comprar
+        </a>
     </div>
     
 </article>

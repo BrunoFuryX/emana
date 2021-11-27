@@ -3,39 +3,20 @@
 {% set type = banners[name].type %}
 <div class="banner banner--{{ name }} banner--{{ type }}">
     {% if type == 'javascript' %}
-    {% if utils.is_mobile %}
-    <div class="banner__list">
-        {% for slide in banners.extra12.slides %}
-        {% set link = slide.link %}
-        {% set image = slide.image %}
-        {% set target = slide.target %}
-        {% set label = slide.label %}
+        <div class="banner__list">
+            {% for slide in banners[name].slides %}
+            {% set link = slide.link %}
+            {% set image = slide.image %}
+            {% set target = slide.target %}
+            {% set label = slide.label %}
 
-        <div class="banner__item">
-            <a class="banner__link" href="{{ link }}" alt="Banner" title="Banner" target="{{ target }}">
-                <img class="banner__img" src="{{ image }}" alt="{{ label }}">
-            </a>
+            <div class="banner__item">
+                <a class="banner__link" href="{{ link }}" alt="Banner" title="Banner" target="{{ target }}">
+                    <img class="banner__img" src="{{ image }}" alt="{{ label }}">
+                </a>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-    {% else %}
-    {% if banners.home.slides %}
-    <div class="banner__list">
-        {% for slide in banners.home.slides %}
-        {% set link = slide.link %}
-        {% set image = slide.image %}
-        {% set target = slide.target %}
-        {% set label = slide.label %}
-        <div class="banner__item">
-            <a class="banner__link" href="{{ link }}" alt="Banner" title="Banner" target="{{ target }}">
-                <img class="banner__img" src="{{ image }}" alt="{{ label }}">
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-    {% endif %}
-
-    {% endif %}
     {% endif %}
 
     {% if type == 'image' %}

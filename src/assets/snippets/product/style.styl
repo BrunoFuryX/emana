@@ -1,9 +1,14 @@
 .product
+    a
+        &:hover
+            opacity 0.7
+            text-decoration: none
     &__header 
-        margin-bottom: 20px 
+        margin-bottom: 30px
         
     &__link 
         display: block 
+        margin: auto
 
     &__image 
         display: block 
@@ -11,9 +16,58 @@
         object-fit: contain
         margin: 0 auto
 
-    &__payment
-        br
-            display: none
+    .prices
+        text-align: center;
+        padding: 16.5px 0
+        &__out
+            font-size: 23px
+            font-weight: bold
+            line-height: 30px
+            color: #4D4D4D
+        &__regular
+            .prices__label
+                font-size: 14px
+                font-weight: bold
+                line-height: 30px
+                color: #4D4D4D
+            .prices__price
+                font-size: 23px
+                font-weight: bold
+                line-height: 30px
+                color: #4D4D4D
+
+    &__name
+        a   
+            font-size: 18px
+            font-weight: bold
+            color: #4D4D4D
+            text-align: center;
+
+
+    &__figure
+        .product__link
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 4px
+            background: #EEF2F6
+            width: 248px
+            height: 235px
+    &__actions
+        .product__link
+            height: 40px
+            width: 150px
+            border-radius: 3px
+            color: #fff
+            background: #F7B84B
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 14px
+            font-weight: 500
+            gap: 14px
+            margin: auto;
+
 
 
 .lazy-new

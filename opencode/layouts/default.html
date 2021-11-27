@@ -1,134 +1,102 @@
 {% spaceless %}
 <!DOCTYPE html>
-<html
-    data-theme="{{ settings.extension_id }}"
-    data-store="{{ store.id }}"
-    class="page-{{ pages.current }}"
-    lang="en"
->
-    <head>
-        <!-- tray charset -->
-        {{ html.charset() }}
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html data-theme="{{ settings.extension_id }}" data-store="{{ store.id }}" class="page-{{ pages.current }}" lang="en">
 
-        <!-- tray meta tags -->
-        {{ tray.meta }}
+<head>
+    <!-- tray charset -->
+    {{ html.charset() }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- tray meta tags -->
+    {{ tray.meta }}
 
-        <!-- tray styles -->
-        {{ tray.styles }}
+    <!-- tray styles -->
+    {{ tray.styles }}
 
-        <!-- theme styles -->
-        <link
-            rel="stylesheet"
-            href="{{ asset('css/bootstrap/bootstrap.min.css') }}"
-            type="text/css"
-        />
-        <link
-            rel="stylesheet"
-            href="{{ asset('css/app.min.css') }}"
-            type="text/css"
-        />
+    <!-- theme styles -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/app.min.css') }}" type="text/css" />
 
-        <link
-            rel="stylesheet"
-            href="{{ asset('js/appreact.css') }}"
-            type="text/css"
-        />
-        <link
-            rel="stylesheet"
-            href="{{ asset('css/custom.css', { dynamic: true }) }}"
-            type="text/css"
-        />
+    <link rel="stylesheet" href="{{ asset('js/appreact.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/custom.css', { dynamic: true }) }}" type="text/css" />
 
-        <style>
-            {{ settings.custom_css }}
-        </style>
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-        />
+    <style>
+        {
+                {
+                settings.custom_css
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-        <!-- tray analytics -->
-        {{ tray.analytics }}
+    <!-- tray analytics -->
+    {{ tray.analytics }}
 
-        <!-- google tag manager -->
-        {{ googleTagManager.header(pages.current, tagManagerData) }}
-    </head>
-    <body class="preload">
-        {{ googleTagManager.top(pages.current, tagManagerData) }} {% element
-        'sprite' %} {% element 'snippets/messages' %}
+    <!-- google tag manager -->
+    {{ googleTagManager.header(pages.current, tagManagerData) }}
+</head>
 
-        <div class="wrapper">
-            <div class="wrapper__container">
-                {% element 'header' %} {% if pages.current == 'home' %} {% if
-                not utils.is_mobile %} {% element 'snippets/banner' {'name':
-                'home'} %} {% else %} {% element 'snippets/banner' {'name':
-                'extra12'} %} {% endif %} {% endif %}
+<body class="preload">
+    {{ googleTagManager.top(pages.current, tagManagerData) }} {% element
+    'sprite' %} {% element 'snippets/messages' %}
 
-                <main class="main">
-                    <div class="main__container">
-                        {{ content_for_layout }}
-                    </div>
-                </main>
+    <div class="wrapper">
+        <div class="wrapper__container">
+            {% element 'header' %} {% if pages.current == 'home' %} {% if
+            not utils.is_mobile %} {% element 'snippets/banner' {'name':
+            'home'} %} {% else %} {% element 'snippets/banner' {'name':
+            'extra12'} %} {% endif %} {% endif %}
 
-                {% if settings.hottags_position == 2 %}
-                <div class="tagcloud">
-                    <h4>As palavras</h4>
-                    <h3>{{ Translation('tags_mais_buscadas') }}</h3>
-                    {% for tag in tags %}
-                    <a
-                        href="{{ tag.url }}"
-                        style="font-size: {{ tag.font_size }}%"
-                        >{{ tag.word }}</a
-                    >
-                    {% endfor %}
+            <main class="main">
+                <div class="main__container">
+                    {{ content_for_layout }}
                 </div>
-                {% endif %} {% if pages.current in ['catalog', 'search',
-                'product'] %} {% if settings.history_position == 2 %} {% endif
-                %} {% endif %} {% element 'snippets/newsletter' %} {% element
-                'footer' %} {% element 'copyright' %} {% element 'partners' %}
+            </main>
+
+            {% if settings.hottags_position == 2 %}
+            <div class="tagcloud">
+                <h4>As palavras</h4>
+                <h3>{{ Translation('tags_mais_buscadas') }}</h3>
+                {% for tag in tags %}
+                <a href="{{ tag.url }}" style="font-size: {{ tag.font_size }}%">{{ tag.word }}</a>
+                {% endfor %}
             </div>
+            {% endif %} {% if pages.current in ['catalog', 'search',
+            'product'] %} {% if settings.history_position == 2 %} {% endif
+            %} {% endif %}
+            {% element 'snippets/instagram' %}
+            {% element 'snippets/newsletter' %} {% element
+            'footer' %} {% element 'copyright' %} {% element 'partners' %}
         </div>
+    </div>
 
-        <!-- tray -->
-        {% element 'snippets/modal' %} {{ googleTagManager.bottom(pages.current,
-        tagManagerData) }} {{ tray.scripts }}
-        <script>
-            var $tray = jQuery
-        </script>
-        {{ html.script({ '0' : tray.paths.js ~ 'dist/application.min.js?' ~
-        utils.assets_version, '1' : tray.paths.js ~ 'init.js?' ~
-        utils.assets_version }) }} {% element 'snippets/pageview' %} {{
-        store.chat }} {% if pages.current != 'login' %} {% element
-        'snippets/tray_login' %} {% endif %}
+    <!-- tray -->
+    {% element 'snippets/modal' %} {{ googleTagManager.bottom(pages.current,
+    tagManagerData) }} {{ tray.scripts }}
+    <script>
+        var $tray = jQuery
+    </script>
+    {{ html.script({ '0' : tray.paths.js ~ 'dist/application.min.js?' ~
+    utils.assets_version, '1' : tray.paths.js ~ 'init.js?' ~
+    utils.assets_version }) }} {% element 'snippets/pageview' %} {{
+    store.chat }} {% if pages.current != 'login' %} {% element
+    'snippets/tray_login' %} {% endif %}
 
-        <div data-quickview></div>
+    <div data-quickview></div>
 
-        <!-- theme scripts-->
-        <script type="text/javascript">
-            var tray = {}
-            tray["settings"] = "{{ (asset()|split('?'))[0] }}"
-        </script>
+    <!-- theme scripts-->
+    <script type="text/javascript">
+        var tray = {}
+        tray["settings"] = "{{ (asset()|split('?'))[0] }}"
+    </script>
 
-        <script
-            type="text/javascript"
-            src="{{ asset('js/slick.min.js') }}"
-        ></script>
+    <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
 
-        <script
-            type="text/javascript"
-            charset="ISO-8859-1"
-            src="{{ asset('js/app.min.js') }}"
-        ></script>
+    <script type="text/javascript" charset="ISO-8859-1" src="{{ asset('js/app.min.js') }}"></script>
 
-        <script
-            type="text/javascript"
-            charset="ISO-8859-1"
-            src="{{ asset('js/appreact.js') }}"
-        ></script>
-        <script type="application/ld+json">
+    <script type="text/javascript" charset="ISO-8859-1" src="{{ asset('js/appreact.js') }}"></script>
+    <script type="application/ld+json">
             {
                 "@context": "http://schema.org/",
                 "@type": "WebSite",
@@ -141,6 +109,10 @@
                 }
             }
         </script>
-    </body>
+    <script>
+        feather.replace()
+    </script>
+</body>
+
 </html>
 {% endspaceless %}
