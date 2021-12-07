@@ -50,18 +50,9 @@
                 </ul>
             </div>
             <div class="header__categorias">
-                <h3>Categorias</h3>
-                <ul>
-                    {% if not menu %}{% set menu = categories %}{% endif %}
-
-                    {% for category in menu %}
-                    <li class="category categoria-{{ category.id }}">
-                        <a href="{{ category.link }}">
-                            {{ category.name }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
+                <a href="/busca.php?loja=1062013&palavra_busca=+">
+                    <h4>Todos os produtos</h4>
+                </a>
             </div>
             {% endif %}
             <div class="header__logo">

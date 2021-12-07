@@ -1,10 +1,8 @@
 <div class="search">
     <button class="search__active" {% if utils.is_mobile %} style="display: none;" {% endif%} data-tray-tst="botao_buscar" style="height: 15px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17.989" height="17.989" viewBox="0 0 17.989 17.989">
-            <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(1 1)">
-              <path id="Caminho_5" data-name="Caminho 5" d="M18.344,11.422A6.922,6.922,0,1,1,11.422,4.5,6.922,6.922,0,0,1,18.344,11.422Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#a7a8a9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-              <path id="Caminho_6" data-name="Caminho 6" d="M28.739,28.739l-3.764-3.764" transform="translate(-13.164 -13.164)" fill="none" stroke="#a7a8a9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-            </g>
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.7071 12.6445C23.7071 14.7911 23.0705 16.8895 21.8779 18.6744C20.6853 20.4592 18.9902 21.8504 17.007 22.6718C15.0238 23.4933 12.8415 23.7082 10.7361 23.2895C8.63074 22.8707 6.69682 21.837 5.17893 20.3191C3.66104 18.8012 2.62734 16.8673 2.20855 14.7619C1.78977 12.6566 2.0047 10.4743 2.82618 8.49106C3.64766 6.50784 5.03878 4.81276 6.82363 3.62016C8.60849 2.42756 10.7069 1.79102 12.8535 1.79102C15.7321 1.79102 18.4927 2.93451 20.5281 4.96993C22.5636 7.00536 23.7071 9.76598 23.7071 12.6445Z" stroke="#9DAEB5" stroke-width="2.96" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26.4203 26.2108L20.5186 20.3091" stroke="#9DAEB5" stroke-width="2.96" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
     <form class="search__form" role="form" action="{{ links.search }}" method="get" data-search="suggestion">
