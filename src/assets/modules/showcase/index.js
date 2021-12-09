@@ -1,8 +1,8 @@
 
- if($('.showcase__list[data-carousel=true]')) {
-    $('.showcase__list[data-carousel=true]').each(function(){
-        $(this).find('.showcase__item--empty').remove();
-        $(this).not('.slick-initialized').slick({
+ if(jQuery('.showcase__list[data-carousel=true]')) {
+    jQuery('.showcase__list[data-carousel=true]').each(function(){
+        jQuery(this).find('.showcase__item--empty').remove();
+        jQuery(this).not('.slick-initialized').slick({
             mobileFirst: false,
             slidesToShow: 4,
             slidesToScroll: 4,

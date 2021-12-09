@@ -2,8 +2,8 @@
 
 var $ = $tray;
 if (typeof $ == 'function') {
-    $(document).ready(function () {
-        $(window).ajaxComplete(function (event, xhr, settings) {
+    jQuery(document).ready(function () {
+        jQuery(window).ajaxComplete(function (event, xhr, settings) {
             if (settings) {
                 if (settings.url.indexOf('variant_gallery') !== -1) {
                     loadThumb();
@@ -14,7 +14,7 @@ if (typeof $ == 'function') {
     });
 
     function loadThumb() {
-        var thumbs = $('.produto-imagem-miniaturas');
+        var thumbs = jQuery('.produto-imagem-miniaturas');
 
         if (thumbs.length) {
             thumbs.hide();
@@ -22,32 +22,32 @@ if (typeof $ == 'function') {
             var images = thumbs.find('img, .icon-video');
             let html;
 
-            if ($('.thumbs').length) $('.thumbs').remove();
+            if (jQuery('.thumbs').length) jQuery('.thumbs').remove();
 
             if (images.length) {
                 html = `<div class="thumbs">`;
                 html += `<ul class="thumbs__list">`;
 
                 images.each((index, item) => {
-                    html += createThumb($(item).attr('src'), index);
+                    html += createThumb(jQuery(item).attr('src'), index);
                 });
 
                 html += `</ul>`;
                 html += `</div>`;
                 thumbs.after(html);
 
-                $(document).trigger("thumbs:start");
+                jQuery(document).trigger("thumbs:start");
 
-                $('.thumbs a').click((evt) => {
-                    let index = $(evt.currentTarget).attr('data-index');
+                jQuery('.thumbs a').click((evt) => {
+                    let index = jQuery(evt.currentTarget).attr('data-index');
 
                     selectThumb(index);
 
-                    if ($(evt.currentTarget).find('.thumb__video').length) {
-                        $('#colVideo').show();
+                    if (jQuery(evt.currentTarget).find('.thumb__video').length) {
+                        jQuery('#colVideo').show();
                     } else {
-                        $($('a', thumbs).eq(index)).mouseover().click();
-                        $('#colVideo').hide();
+                        jQuery(jQuery('a', thumbs).eq(index)).mouseover().click();
+                        jQuery('#colVideo').hide();
                     }
                     evt.preventDefault();
                 });
@@ -58,8 +58,8 @@ if (typeof $ == 'function') {
     }
 
     function selectThumb(index) {
-        $(`.thumbs li`).removeClass('thumbs__item--actived');
-        $(`.thumbs [data-index=${index}]`).closest('li').addClass('thumbs__item--actived');
+        jQuery(`.thumbs li`).removeClass('thumbs__item--actived');
+        jQuery(`.thumbs [data-index=${index}]`).closest('li').addClass('thumbs__item--actived');
     }
 
     function createThumb(src, index) {

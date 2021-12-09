@@ -84,22 +84,14 @@
 
     <div class="page-product__header">
         <h1 class="page-product__name" itemprop="name">{{ product.name }}</h1>
+        {% if product.additional_message %}
+            <div class="additional-message">
+                {{ product.additional_message }}
+            </div>
+        {% endif %}
 
         <div class="page-product__short-review">
             {% element 'snippets/rating-short' { 'product': product } %}
-        </div>
-
-        <div class="page-product__head">
-            {% if product.brand %}
-            <div class="page-product__brand">
-                Marca: {{ product.brand }}
-            </div>
-            {% endif %}
-            {% if product.model %}
-            <div class="page-product__model">
-                Modelo: {{ product.model }}
-            </div>
-            {% endif %}
         </div>
 
     </div>
@@ -124,14 +116,15 @@
     </div>
 
     <div class="page-product__details">
-        {% if productHelper.banner() %}{{ productHelper.banner() }}{% endif %}
-
-        {{ productHelper.bonus() }}
-
+        {% if  product.description_small %}
+            <div class="description_small">
+                {{ product.description_small }}
+            </div>
+        {% endif %}
         <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
 
             {% if product.available != 0 %}
-            {{ productHelper.variants() }}
+                {{ productHelper.variants() }}
             {% endif %}
 
             <div data-module="pricing" data-snippet="snippets/pricing" data-product-id="{{ product.id }}">
@@ -143,52 +136,25 @@
             {{ productHelper.gifts() }}
             {{ product.additional_information }}
             <div class="page-product__actions">
-                {{ productHelper.form() }}
+                {#
+                # Botões de mais e menos para aumentar ou diminuir a quantidade do produto
+                # elements/snippets/botoes_qty.html
+                #}
+                <div data-app="product.quantity" id="quantidade">
+                    <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>
+                    <input type="button" id="minus" value='-' onclick="process(-1)" />
+                    <input id="quant" name="quant" class="text" size="1" type="text" value="1" maxlength="5" />
+                    <input type="button" id="plus" value='+' onclick="process(1)">
+                </div>
+                <button type="submit">Comprar <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.973 17.0416C24.1292 17.0416 25.1467 16.4095 25.6709 15.4537L31.1901 5.44825C31.7605 4.43075 31.0205 3.16659 29.8488 3.16659H7.03216L5.583 0.083252H0.541748V3.16659H3.62508L9.17508 14.8678L7.09383 18.6295C5.96841 20.6953 7.44841 23.2083 9.79175 23.2083H28.2917V20.1249H9.79175L11.4876 17.0416H22.973ZM8.49653 6.25H27.2278L22.9728 13.9583H12.1503L8.49653 6.25ZM9.79168 24.75C8.09585 24.75 6.72376 26.1375 6.72376 27.8333C6.72376 29.5292 8.09585 30.9167 9.79168 30.9167C11.4875 30.9167 12.875 29.5292 12.875 27.8333C12.875 26.1375 11.4875 24.75 9.79168 24.75ZM25.2083 24.75C23.5125 24.75 22.1404 26.1375 22.1404 27.8333C22.1404 29.5292 23.5125 30.9167 25.2083 30.9167C26.9042 30.9167 28.2917 29.5292 28.2917 27.8333C28.2917 26.1375 26.9042 24.75 25.2083 24.75Z" fill="white"/>
+                    </svg>
+                    </button>
             </div>
             {{ productHelper.kit() }}
 
-            {{ productHelper.shipping() }}
-
-            {% if product.additional_message %}
-            <div class="additional-message">
-                {{ product.additional_message }}
-            </div>
-            {% endif %}
+            
         </form>
-
-        <ul class="page-product__links">
-            <li class="page-product__links-item page-product__links-item--friend">
-                <a class="page-product__links-link" data-url="{{ links.product_recommend }}&IdProd={{ product.id }}"
-                    data-title="{{ product.name }}" data-toggle="modal" data-target="#modal-form"
-                    data-modal-width="600px" href="#">{{ Translation('indique_amigo') }}</a>
-            </li>
-
-            <li class="page-product__links-item page-product__links-item--help">
-                <a class="page-product__links-link" data-url="{{ links.product_question }}&IdProd={{ product.id }}"
-                    data-title="{{ product.name }}" data-toggle="modal" data-target="#modal-form"
-                    data-modal-width="600px" href="#">{{ Translation('tire_duvidas') }}</a>
-            </li>
-
-            <li class="page-product__links-item page-product__links-item--compare">
-                <span class="page-product__links-link" id="product-compare">
-                    {% if settings.compare %}
-                    <span id="comparar">
-                        {% element 'product/compare' {
-                            'product': product,
-                            'links': links
-                        } %}
-                    </span>
-                    {% endif %}
-                </span>
-            </li>
-            {% if not product.upon_request and product.available %}
-            <li class="page-product__links-item page-product__links-item--wishlist">
-                {{ productHelper.wishlist() }}
-            </li>
-            {% endif %}
-        </ul>
-
-
     </div>
 </section>
 

@@ -1,5 +1,5 @@
-if($('.rulers__list')) {
-    $('.rulers__list').not('.slick-initialized').slick({
+if(jQuery('.rulers__list')) {
+    jQuery('.rulers__list').not('.slick-initialized').slick({
         mobileFirst: true,
         slidesToShow: 1,
         slidesToScroll: 1,

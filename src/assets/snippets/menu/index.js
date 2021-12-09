@@ -11,27 +11,27 @@ function debounce(func){
 }
 
 function navigationHiddenResize() {
-    var widthNavigation = $('.menu--navigation .menu__ul--nv1').outerWidth();
+    var widthNavigation = jQuery('.menu--navigation .menu__ul--nv1').outerWidth();
     var widthCurrent = 0;
-    $('.menu--navigation .menu__item--nv1').removeClass('menu__item--hidden');
-    $('.menu--navigation .menu__item--nv1').each(function(){
-        widthCurrent += $(this).outerWidth();
+    jQuery('.menu--navigation .menu__item--nv1').removeClass('menu__item--hidden');
+    jQuery('.menu--navigation .menu__item--nv1').each(function(){
+        widthCurrent += jQuery(this).outerWidth();
         if(widthCurrent > widthNavigation) {
-            $(this).addClass('menu__item--hidden');
+            jQuery(this).addClass('menu__item--hidden');
         }
     });
 }
 
 function navigationAlign() {
-    $('.menu--navigation').each(function(){
-        $(this).find('.menu--nv2').removeClass('menu--rtl');
-        $(this).find('.menu--nv2').each(function(){
-            var nav = $(this).closest('.menu--nv1').outerWidth();
-            var left = $(this).offset().left + $(this).outerWidth();
+    jQuery('.menu--navigation').each(function(){
+        jQuery(this).find('.menu--nv2').removeClass('menu--rtl');
+        jQuery(this).find('.menu--nv2').each(function(){
+            var nav = jQuery(this).closest('.menu--nv1').outerWidth();
+            var left = jQuery(this).offset().left + jQuery(this).outerWidth();
 
             if(left > nav) {
                 
-                $(this).addClass('menu--rtl');
+                jQuery(this).addClass('menu--rtl');
             }
         });
     })

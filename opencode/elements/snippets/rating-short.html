@@ -2,15 +2,17 @@
 <div class="rating-short" data-stars-count="{{ product.ranking.rating }}" >
     <div class="rating-short__container">
         {% for i in 1..5 %}
-            {% if i <= product.ranking.rating %}
-                <span class="rating-short__star rating-short__star--actived"><i class="fas fa-star"></i></span>
+            {% if i <= product.ranking.rating or i <= 4 %}
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6206 -0.000244141L15.5708 6.73464L23.2415 8.38417L18.0121 14.1961L18.8027 21.9504L11.6206 18.8075L4.43844 21.9504L5.22906 14.1961L-0.000366211 8.38417L7.6704 6.73464L11.6206 -0.000244141Z" fill="#FFD423"/>
+                </svg>
+                
             {% else %}
-                <span class="rating-short__star"><i class="fas fa-star"></i></span>
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6206 -0.000244141L15.5708 6.73464L23.2415 8.38417L18.0121 14.1961L18.8027 21.9504L11.6206 18.8075L4.43844 21.9504L5.22906 14.1961L-0.000366211 8.38417L7.6704 6.73464L11.6206 -0.000244141Z" fill="#BDBDBD"/>
+                </svg>
             {% endif %}
         {% endfor %}
-        <span class="rating-short__votes">
-            ( {{ product.ranking.count }} )
-        </span>
     </div>
 </div>
 {% endif %}

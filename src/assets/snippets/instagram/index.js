@@ -1,5 +1,5 @@
-if ($('.instagram__content').length) {
-    $('.instagram__content').not('.slick-initialized').slick({
+if (jQuery('.instagram__content').length) {
+    jQuery('.instagram__content').not('.slick-initialized').slick({
         mobileFirst: true,
         slidesToShow: 2,
         slidesToScroll: 2,

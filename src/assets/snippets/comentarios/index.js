@@ -1,5 +1,5 @@
-if ($('.comentario__content').length) {
-    $('.comentario__content').not('.slick-initialized').slick({
+if (jQuery('.comentario__content').length) {
+    jQuery('.comentario__content').not('.slick-initialized').slick({
         mobileFirst: true,
         slidesToShow: 1,
         slidesToScroll: 1,

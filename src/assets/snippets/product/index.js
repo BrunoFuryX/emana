@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 if (typeof $tray === 'function') {
     $tray(document).on('thumbs:start', function () {
-        $('.thumbs__list').slick({
+        jQuery('.thumbs__list').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
             vertical: false,

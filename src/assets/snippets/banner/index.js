@@ -1,6 +1,6 @@
 
-if($('.banner--javascript .banner__list')) {
-$('.banner--javascript .banner__list').not('.slick-initialized').slick({
+if(jQuery('.banner--javascript .banner__list')) {
+jQuery('.banner--javascript .banner__list').not('.slick-initialized').slick({
     mobileFirst: false,
     infinite: false,
     arrows: false,
@@ -26,8 +26,8 @@ $('.banner--javascript .banner__list').not('.slick-initialized').slick({
 });
 }
 
-if($('.banner--grid .banner__list')) {
-$('.banner--grid .banner__list').not('.slick-initialized').slick({
+if(jQuery('.banner--grid .banner__list')) {
+jQuery('.banner--grid .banner__list').not('.slick-initialized').slick({
     mobileFirst: true,
     slidesToShow: 1,
     slidesToScroll: 1,

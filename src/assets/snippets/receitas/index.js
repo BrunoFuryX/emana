@@ -1,5 +1,5 @@
-if ($('.receita__content').length) {
-    $('.receita__content').not('.slick-initialized').slick({
+if (jQuery('.receita__content').length) {
+    jQuery('.receita__content').not('.slick-initialized').slick({
         mobileFirst: true,
         slidesToShow: 1,
         slidesToScroll: 1,

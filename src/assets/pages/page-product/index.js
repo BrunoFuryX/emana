@@ -5,7 +5,7 @@ if(jQuery(".page-product").length > 0){
         // Atualizar o carrinho sozinho na pag de produto
         jQuery(document).ready(function ($) {
 
-            $(document).ajaxComplete(function (event, xhr, settings) {
+            jQuery(document).ajaxComplete(function (event, xhr, settings) {
                 if (settings.url.indexOf("cart_preview") !== -1) {
                     var UPDATECART = new CustomEvent('UPDATECART');
                     window.dispatchEvent(UPDATECART);
@@ -14,4 +14,16 @@ if(jQuery(".page-product").length > 0){
         })
         jQuery("#foto_p").removeAttr("data-target")
     })(jQuery);
+}
+
+
+
+function process(quant){
+    var value = parseInt(document.getElementById("quant").value);
+    value+=quant;
+    if(value < 1){
+      document.getElementById("quant").value = 1;
+    }else{
+    document.getElementById("quant").value = value;
+    }
 }
