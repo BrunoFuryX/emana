@@ -37,19 +37,6 @@ function navigationAlign() {
     })
 }
 
-var childs = Array.from(document.querySelectorAll('.menu__item--has-child'));
-
-childs.forEach((child) => {
-    child.addEventListener('click', (evt) => {
-        const target = evt.target;
-        if (evt.currentTarget === target) {
-            var expanded = target.getAttribute('aria-expanded');
-            if (expanded !== 'true' && expanded !== 'false') expanded = 'false';
-            target.setAttribute('aria-expanded', expanded === 'true' ? false : true);
-            jQuery(target).find('> .menu--sub').slideToggle();
-        }
-    }, false);
-});
 
 
 // window.addEventListener('resize', debounce(function(e){

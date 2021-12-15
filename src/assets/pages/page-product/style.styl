@@ -27,6 +27,7 @@
         display: flex
         gap: 5px
         align-items: baseline;
+        flex-wrap: wrap;
     #info_preco
     .txt-por
         display: none
@@ -237,6 +238,10 @@
         padding: 35px 0 
         border-top: 1px solid #e1e1e1
         width: fit-content;
+        @media mobile
+            flex-wrap: wrap
+            justify-content: center
+
         button
             width: 234px;
             height: 56px;
@@ -332,7 +337,6 @@
 
         &__image 
             grid-area: image 
-
         &__header 
             grid-area: header 
             
@@ -359,6 +363,8 @@
                 font-size: 24px;
                 line-height: 200%;
                 letter-spacing: 0.005em;
+                @media mobile
+                    font-size: 16px
                 &:first-child
                     font-style: normal;
                     font-weight: bold;
@@ -366,6 +372,8 @@
                     line-height: 200%;
                     letter-spacing: 0.005em;
                     color: #464646;
+                    @media mobile
+                        font-size: 16px
 
         p
             font-style: normal;
@@ -373,6 +381,8 @@
             font-size: 24px;
             letter-spacing: 0.005em;
             color: #464646;
+            @media mobile
+                font-size: 16px
     &__ingredientes
         h5
             font-style: normal;
@@ -382,11 +392,15 @@
             color: #464646;
             transform: rotate(0.08deg);
             margin-bottom: 25px
+            @media mobile
+                font-size: 21px
         p
             font-size: 24px;
             line-height: 140%;
             letter-spacing: 0.005em;
             color: #464646;
+            @media mobile
+                font-size: 16px
 .infos
     .titulo
         margin: 0 0 20px
@@ -398,6 +412,9 @@
         letter-spacing: 0.005em;
         color: #464646;
         margin-bottom: 20px
+        @media mobile
+            font-size: 16px
+
 .vantagens
     tbody
         display: flex
@@ -409,10 +426,17 @@
         gap: 25px
         font-size: 24px
         color: #464646
+        @media mobile
+            font-size: 16px
+
         :first-child
             width: 38px
             height: 35px
 .descricao
+    @media mobile
+        img
+            width: auto !important
+            height: auto !important
     .titulo
         width: fit-content;
     > .titulo
@@ -428,6 +452,8 @@
         > figure,
         > div
             flex 1 0 650px
+            @media mobile
+                flex 1 0 100%
 
         figure
             display: flex

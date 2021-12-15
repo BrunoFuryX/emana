@@ -1,34 +1,45 @@
 .paginate 
     text-align: center 
-
+    &__container 
+        display: flex 
+        justify-content: center 
+        align-items: center 
     &__pages
         display: inline-flex 
         flex-flow: row wrap 
         margin: 5px -5px
 
-    &__link a, &__link--current 
+    &__link a
+        width: 40px
+        height: 40px
         flex: 0 0 auto
         display: flex 
         justify-content: center 
         align-items: center 
-        padding: 5px 15px
-        margin: 5px 
-        background: rgba(0,0,0,.2)
-
+        color: #515151
         &:hover 
             text-decoration: none 
-            background: rgba(0,0,0,.8)
             color: #fff
+            background: #EB6323
+    &__link--next
+    &__link--prev
+        color: #EB6323
+    &__link--current 
+        width: 40px
+        height: 40px
+        flex: 0 0 auto
+        display: flex 
+        justify-content: center 
+        align-items: center 
+        background: #EB6323
+        color: #fff
 
 
     &__link 
-        &--number:not(.paginate__link--current)
-            display: none 
-
         &--first, &--prev, &--next, &--last 
             a 
                 &:before 
-                    font-size: 14px 
+                    font-size: 22px 
 
         &--first a:before 
             icon: '\f100'
@@ -49,7 +60,7 @@
 
         &__container 
             display: flex 
-            justify-content: flex-start 
+            justify-content: center 
             align-items: center 
 
         &__pages 

@@ -19,11 +19,30 @@
     .prices
         text-align: center;
         padding: 16.5px 0
+        &__container
+            display: flex
+            justify-content: center
+            align-content: center
+            gap: 20px
         &__out
             font-size: 23px
             font-weight: bold
             line-height: 30px
             color: #4D4D4D
+        &__old
+            .prices__label
+                font-size: 18px
+                font-weight: bold
+                line-height: 30px
+                color: #ccc
+            .prices__price
+                font-size: 24px
+                font-weight: bold
+                line-height: 30px
+                color: #ccc
+                text-decoration: line-through
+
+        &__special
         &__regular
             .prices__label
                 font-size: 18px
@@ -58,6 +77,8 @@
             justify-content: center
             align-items: center
             height: 380px
+            img
+                height: 100%
     &__actions
         .product__link
             height: 56px
