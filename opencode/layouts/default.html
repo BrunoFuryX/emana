@@ -65,7 +65,10 @@
             {% endif %} {% if pages.current in ['catalog', 'search',
             'product'] %} {% if settings.history_position == 2 %} {% endif
             %} {% endif %}
+            {% if pages.current in ['catalog', 'search',
+            'product', 'home'] %}
             {% element 'snippets/instagram' %}
+            {% endif %}
             {% element 'snippets/newsletter' %} {% element
             'footer' %} {% element 'copyright' %} {% element 'partners' %}
         </div>
