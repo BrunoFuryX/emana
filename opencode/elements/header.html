@@ -39,15 +39,38 @@
 
             <div class="header__produtos">
                 <h3>Produtos</h3>
-                <ul>
-                    {% for link in settings.produto %}
-                    {% if link.url != "" and link.name != "" %}
-                    <li>
-                        <a href="{{ link.url }}">{{ link.name }}</a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
+                <div>
+                    <div class="container">
+                        <div>
+                            <h5>CATEGORIAS</h5>
+                            <ul>
+                                {% for link in settings.produto %}
+                                {% if link.url != "" and link.name != "" %}
+                                <li>
+                                    <a href="{{ link.url }}">{{ link.name }}</a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="divisor"></div>
+                        <div>
+                            <h5>OBJETIVOS</h5>
+                            <ul>
+                                {% for link in settings.objetivos %}
+                                {% if link.url != "" and link.name != "" %}
+                                <li>
+                                    <a href="{{ link.url }}">{{ link.name }}</a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                                <li>
+                                    <a href=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="header__categorias">
                 <a href="/busca.php?loja=1062013&palavra_busca=+">

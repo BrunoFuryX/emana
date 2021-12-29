@@ -60,10 +60,69 @@
         justify-content: center
         > div
             position: relative
+            height: 100%;
+            display: flex;
+            align-items: center;
+            > div 
+                position: fixed
+                top: 130px
+                left: 0
+                width: 100vw
+                height: 400px
+                background: #EEF2F6
+                box-shadow: 0 22px 15px #0004
+                opacity 0
+                visibility: hidden
+                .container
+                    max-width: 1330px
+                    padding: 30px 15px
+                    display: flex
+                    gap: 20px
+                    align-items: center
+                    justify-content: center
+                    .divisor
+                        height: 200px
+                        width: 1px 
+                        background: #ccc
+                    >div:not(.divisor)
+                        height: 300px
+
+                        &:first-child
+                            width: 840px
+                        &:last-child
+                            width: 380px
+                        > h5
+                            color: #464646
+                            padding: 10px 0
+                            border-bottom: 1px solid #000
+                            font-size: 22px
+                            text-transform: uppercase
+                            font-weight: 600
+
+                        > ul
+                            display: flex
+                            flex-direction: column
+                            gap 20px
+                            padding: 30px 0
+                            flex-wrap: wrap
+                            max-height: 270px
+                            li
+                                a
+                                    font-size: 22px
+                                    font-weight: 400
+                                    line-height: 26px
+                                    color: #464646
+
+                                &:last-child
+                                    a
+                                        font-size: 22px
+                                        text-transform: uppercase
+                                        font-weight: 600
             &:not(.header__logo)
                 @media mobile
                     display: none
             &:hover
+                > div
                 ul
                     opacity 1
                     visibility: visible
@@ -76,7 +135,7 @@
                 justify-content: center
                 gap: 5px
                 cursor: pointer
-                height: 65px
+                height: 80px
                 &:after
                     display: block
                     content ""
@@ -93,7 +152,8 @@
                 gap: 5px
                 cursor: pointer
                 height: 65px
-            ul
+            
+            > ul
                 position: absolute
                 top: 100%
                 height: auto
