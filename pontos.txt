@@ -1,0 +1,12 @@
+4. Ajustar o banner do produto, o botão é laranja: R: O ponto em questão é um banner que pode ser alterável pelo proprio painel da tray, sendo identificado por Extra1.
+5. Configurar as categorias para serem dinâmicas e clicar direcionar para produtos da categoria seleciona, quando clicar em ver mais, ter uma página de categorias e não direcionar para o produto gerais R: As categorias são configuráveis por settings, sendo possivel a edição dos nomes, fotos e links para qual quiser. Ter uma pagina de categorias? seria uma contratação
+9. O menu no responsivo não está funcionando, ao clicar no botão de hambúrguer nada acontece (mas retorna um erro no console do navegador). R: Não consegui reproduzir o erro.
+10. Na sessão do Instagram, seria possível deixar 2 colunas de imagens ao invés de 1? R: não vai ficar estranho 2 em cada linha e um solitário no final?
+
+11. 4. Adicionar sessões de ícones R: o que é isso?
+11. 5. Alinhar a imagem das vantagens ao lado dos ícones R: o que é isso?
+11. 6. Alinhar a imagem da embalagem ao lado de como usar o produto e adicionar a logo no fundo da img da embalagem R: não entendi
+
+16. Padronizar o tamanho das fontes, na sobre que está maior que nas demais e a barrinha está muito abaixo do texto R: O tamanho dos textos da pagina institucional já estão todos padronizados e seguindo seu peso conforme a prévia passada anteriormente
+
+22. É possível alterar essa parte do cadastro de usuário? remover o fundo cinza, e centralizar esse botão de avançar? R: Sim, é possivel

@@ -14,7 +14,7 @@
                 </svg>
             </div>
             <div class="footer__box footer__box--institutional">
-                <h3 class="footer__title title title--small">LEARN MORE</h3>
+                <h3 class="footer__title title title--small">Institucional</h3>
                 <ul class="footer__custom">
                     {% for link in settings.instutitional %}
                         {% if link.url != "" and link.name != "" %}
@@ -27,7 +27,7 @@
                 </ul>
             </div>
             <div class="footer__box footer__box--institutional">
-                <h3 class="footer__title title title--small">SUPPORT</h3>
+                <h3 class="footer__title title title--small">Links Úteis</h3>
                 <ul class="footer__custom">
                     {% for link in settings.ajuda %}
                         {% if link.url != "" and link.name != "" %}
@@ -40,8 +40,9 @@
                 </ul>
             </div>
 
-            <div class="footer__box footer__box--institutional">
-                <h3 class="footer__title title title--small">CONTACT</h3>
+            <div class="footer__box footer__box--institutional" id="contato">
+                <h3 class="footer__title title title--small">Contato
+                </h3>
                 <ul class="footer__custom">
                     <li class="footer__custom-item">
                         <a class="footer__custom-link" href="mailto:{{ settings.email }}">{{ settings.email }}</a>
@@ -58,8 +59,7 @@
             %}
 
             <div class="footer__box">
-                <h3 class="footer__title title title--small">ARE YOU #TEAMOATS?</h3>
-                <span>Join the squad, follow along, share your experience. We can't wait to meet you.</span>
+                <h3 class="footer__title title title--small">Conecte-se</h3>
                 {% element 'snippets/socials' %}
             </div>
             {% endif %}
@@ -67,3 +67,4 @@
         </div>
     </div>
 </footer>
+{% element 'snippets/reguacrowd' %}

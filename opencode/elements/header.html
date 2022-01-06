@@ -73,8 +73,8 @@
                 </div>
             </div>
             <div class="header__categorias">
-                <a href="/busca.php?loja=1062013&palavra_busca=+">
-                    <h4>Todos os produtos</h4>
+                <a href="/quem-somos">
+                    <h4>Quem Somos</h4>
                 </a>
             </div>
             {% endif %}
@@ -84,24 +84,14 @@
             {% if not utils.is_mobile %}
 
             <div class="header__conteudo">
-                <h3>Conteúdo</h3>
-                <ul>
-                    {% for link in settings.conteudo %}
-                    {% if link.url != "" and link.name != "" %}
-                    <li>
-                        <a href="{{ link.url }}">{{ link.name }}</a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
+                <a href="https://blog.souemana.com.br">
+                    <h4>Conteúdos</h4>
+                </a>
             </div>
             <div class="header__contato">
-                <h3>Contato</h3>
-                <ul>
-                    <li>
-                        <a href="mailto:{{settings.email}}"> {{ settings.email}}</a>
-                    </li>
-                </ul>
+                <a href="#contato">
+                    <h4>Contato</h4>
+                </a>
             </div>
             {% endif %}
         </div>
