@@ -8,44 +8,9 @@
             </span>
             </span>
         </div>
-        <a class="blog__button" href="/noticias">Ver mais</a>
+        <a class="blog__button" target="_blank" href="https://blog.souemana.com.br">Ver mais</a>
         <div class="blog__content">
-            {% if settings.blog1%}
-                <div class="blog__item">
-                    <figure>
-                        <img src="{{ asset(settings.blog1)}}">
-                        <span>{{ settings.blog1_data}}</span>
-                    </figure>
-                    <h4>
-                        {{ settings.blog1_title}}
-                    </h4>
-                    <a href="{{ settings.blog1_link}}">Leia mais</a>
-                </div>
-            {% endif %}
-            {% if settings.blog2%}
-                <div class="blog__item">
-                    <figure>
-                        <img src="{{ asset(settings.blog2)}}">
-                        <span>{{ settings.blog2_data}}</span>
-                    </figure>
-                    <h4>
-                        {{ settings.blog2_title}}
-                    </h4>
-                    <a href="{{ settings.blog2_link}}">Leia mais</a>
-                </div>
-            {% endif %}
-            {% if settings.blog3%}
-                <div class="blog__item">
-                    <figure>
-                        <img src="{{ asset(settings.blog3)}}">
-                        <span>{{ settings.blog3_data}}</span>
-                    </figure>
-                    <h4>
-                        {{ settings.blog3_title}}
-                    </h4>
-                    <a href="{{ settings.blog3_link}}">Leia mais</a>
-                </div>
-            {% endif %}
+            
         </div>
     </div>
 </section>
